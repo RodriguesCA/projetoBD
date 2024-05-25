@@ -15,14 +15,14 @@ CREATE TABLE Seccao(
 
 CREATE TABLE Cliente(
     Nome          VARCHAR(30),
-    NIF           INTEGER        NOT NULL,
+    NIF           INTEGER        NOT NULL   UNIQUE,
 
     PRIMARY KEY ( NIF )
 );
 
 CREATE TABLE Produto(
     Nome          VARCHAR(30)    NOT NULL,
-    Codigo        INTEGER        NOT NULL                CHECK(Codigo > 0),
+    Codigo        INTEGER        NOT NULL                CHECK(Codigo > 0) UNIQUE,
     Tipo_Seccao   VARCHAR(50),
     Preco         DECIMAL(10, 2),
     IVA           INTEGER        NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE Empregado(
 
 CREATE TABLE Compra(
     c_Data        DATE           NOT NULL,
-    N_Compra      INTEGER        NOT NULL     CHECK(N_Compra > 0),
+    N_Compra      INTEGER        NOT NULL     CHECK(N_Compra > 0) UNIQUE,
     N_Empregado   INTEGER        NOT NULL,
     NIF_Cliente   INTEGER        NOT NULL,
 
