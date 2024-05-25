@@ -64,7 +64,7 @@ CREATE TABLE Compra_Produto(
 );
 
 CREATE TABLE Caixista(
-    N_Caixa       INTEGER        NOT NULL,
+    N_Caixa       INTEGER        ,
     N_Caixista    INTEGER        NOT NULL,
 
     FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado)
