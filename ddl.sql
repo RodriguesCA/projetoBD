@@ -86,3 +86,15 @@ CREATE TABLE Armazem(
     FOREIGN KEY(C_Produto) REFERENCES Produto(Codigo),
     FOREIGN KEY(T_Seccao)  REFERENCES Seccao(Tipo)
 );
+
+CREATE TABLE Caixa (
+    N_Caixa       INTEGER        NOT NULL,
+    N_Caixista    INTEGER        ,
+    Estado        BOOLEAN        NOT NULL,
+
+    PRIMARY KEY(N_Caixa),
+    FOREIGN KEY(N_Caixista) REFERENCES Caixista(N_Caixista),
+);
+
+
+
