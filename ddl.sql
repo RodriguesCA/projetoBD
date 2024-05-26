@@ -15,18 +15,18 @@ CREATE TABLE Seccao(
 
 CREATE TABLE Cliente(
     Nome          VARCHAR(30),
-    NIF           INTEGER        NOT NULL,
+    NIF           INTEGER        NOT NULL   UNIQUE,
 
     PRIMARY KEY ( NIF )
 );
 
 CREATE TABLE Produto(
     Nome          VARCHAR(30)    NOT NULL,
-    Codigo        INTEGER        NOT NULL                CHECK(Codigo > 0),
+    Codigo        INTEGER        NOT NULL                CHECK(Codigo > 0) UNIQUE,
     Tipo_Seccao   VARCHAR(50),
     Preco         DECIMAL(10, 2),
     IVA           INTEGER        NOT NULL,
-    Unidades      INTEGER        CHECK(Unidades > 0),
+    Unidades      INTEGER,
 
     PRIMARY KEY ( Codigo ),
     FOREIGN KEY ( Tipo_Seccao ) REFERENCES Seccao ( Tipo )
@@ -44,7 +44,7 @@ CREATE TABLE Empregado(
 
 CREATE TABLE Compra(
     c_Data        DATE           NOT NULL,
-    N_Compra      INTEGER        NOT NULL     CHECK(N_Compra > 0),
+    N_Compra      INTEGER        NOT NULL     CHECK(N_Compra > 0) UNIQUE,
     N_Empregado   INTEGER        NOT NULL,
     NIF_Cliente   INTEGER        NOT NULL,
 
@@ -63,11 +63,22 @@ CREATE TABLE Compra_Produto(
     FOREIGN KEY (C_Produto) REFERENCES Produto (Codigo)
 );
 
-CREATE TABLE Caixista(
-    N_Caixa       INTEGER        ,
-    N_Caixista    INTEGER        NOT NULL,
+CREATE TABLE Caixa (
+    N_Caixa       INTEGER        NOT NULL   UNIQUE,
+    N_Caixista    INTEGER,
+    Estado        BIT,
 
-    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado)
+    PRIMARY KEY(N_Caixa),
+    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado),
+);
+
+
+CREATE TABLE Caixista(
+    N_Caixa       INTEGER,
+    N_Caixista    INTEGER        NOT NULL,
+	
+    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado),
+    FOREIGN KEY(N_Caixa) REFERENCES Caixa(N_Caixa)
 );
 
 CREATE TABLE Lojista(
@@ -85,15 +96,6 @@ CREATE TABLE Armazem(
 
     FOREIGN KEY(C_Produto) REFERENCES Produto(Codigo),
     FOREIGN KEY(T_Seccao)  REFERENCES Seccao(Tipo)
-);
-
-CREATE TABLE Caixa (
-    N_Caixa       INTEGER        NOT NULL,
-    N_Caixista    INTEGER        ,
-    Estado        BOOLEAN        NOT NULL,
-
-    PRIMARY KEY(N_Caixa),
-    FOREIGN KEY(N_Caixista) REFERENCES Caixista(N_Caixista),
 );
 
 
