@@ -49,6 +49,7 @@
             total_revenue = new Label();
             n_purchases = new Label();
             n_purchases_value = new TextBox();
+            button_shop = new Button();
             SuspendLayout();
             // 
             // button_manager
@@ -270,12 +271,27 @@
             n_purchases_value.Size = new Size(101, 31);
             n_purchases_value.TabIndex = 19;
             // 
+            // button_shop
+            // 
+            button_shop.BackColor = Color.Black;
+            button_shop.FlatStyle = FlatStyle.Popup;
+            button_shop.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_shop.ForeColor = Color.IndianRed;
+            button_shop.Location = new Point(848, 24);
+            button_shop.Margin = new Padding(5, 3, 3, 3);
+            button_shop.Name = "button_shop";
+            button_shop.Size = new Size(127, 44);
+            button_shop.TabIndex = 20;
+            button_shop.Text = "Shop";
+            button_shop.UseVisualStyleBackColor = false;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1186, 764);
+            Controls.Add(button_shop);
             Controls.Add(n_purchases_value);
             Controls.Add(n_purchases);
             Controls.Add(total_revenue);
@@ -325,5 +341,6 @@
         private Label total_revenue;
         private Label n_purchases;
         private TextBox n_purchases_value;
+        private Button button_shop;
     }
 }

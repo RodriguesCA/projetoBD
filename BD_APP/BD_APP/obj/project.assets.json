@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmzez\\source\\repos\\BD_APP\\BD_APP\\BD_APP.csproj",
+      "projectUniqueName": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
       "projectName": "BD_APP",
-      "projectPath": "C:\\Users\\jmzez\\source\\repos\\BD_APP\\BD_APP\\BD_APP.csproj",
+      "projectPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
       "packagesPath": "C:\\Users\\jmzez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmzez\\source\\repos\\BD_APP\\BD_APP\\obj\\",
+      "outputPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jmzez\\AppData\\Roaming\\NuGet\\NuGet.Config",
