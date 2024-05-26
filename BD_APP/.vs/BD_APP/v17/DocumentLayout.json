@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +42,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Sec\u00E7\u00F5es.cs",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Sec\u00E7\u00F5es.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs",
+              "RelativeToolTip": "BD_APP\\Sec\u00E7\u00F5es.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAMwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:11:51.724Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Caixas.cs",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Caixas.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs",
+              "RelativeToolTip": "BD_APP\\Caixas.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAnwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:30:47.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Caixas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Caixas.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs [Design]",
+              "RelativeToolTip": "BD_APP\\Caixas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:27:39.113Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Sec\u00E7\u00F5es.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Sec\u00E7\u00F5es.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs [Design]",
+              "RelativeToolTip": "BD_APP\\Sec\u00E7\u00F5es.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T20:53:59.231Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Welcome.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
@@ -42,26 +113,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Welcome.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
-              "RelativeDocumentMoniker": "BD_APP\\Welcome.Designer.cs",
-              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
-              "RelativeToolTip": "BD_APP\\Welcome.Designer.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAnwBYAAAAIAAAA",
+              "DocumentIndex": 6,
+              "Title": "Inicio.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Inicio.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs [Design]",
+              "RelativeToolTip": "BD_APP\\Inicio.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:18:45.77Z",
+              "WhenOpened": "2024-05-26T21:23:42.634Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inicio.cs",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Inicio.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs",
+              "RelativeToolTip": "BD_APP\\Inicio.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAnwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:23:48.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Welcome.cs",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
               "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeToolTip": "BD_APP\\Welcome.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAowGwAAAAlAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAWwI8AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T00:03:18.96Z",
               "EditorCaption": ""

@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace BD_APP
 {
-    public partial class Manager : Form
+    public partial class Secções : Form
     {
-        public Manager()
+        public Secções()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button_fruta_Click(object sender, EventArgs e)
         {
 
         }

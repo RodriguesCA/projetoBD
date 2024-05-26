@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BD_APP
 {
-    public partial class Employe : Form
+    public partial class Fatura : Form
     {
-        public Employe()
+        public Fatura()
         {
             InitializeComponent();
         }

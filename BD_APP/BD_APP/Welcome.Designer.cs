@@ -284,6 +284,7 @@
             button_shop.TabIndex = 20;
             button_shop.Text = "Shop";
             button_shop.UseVisualStyleBackColor = false;
+            button_shop.Click += button_shop_Click;
             // 
             // Welcome
             // 

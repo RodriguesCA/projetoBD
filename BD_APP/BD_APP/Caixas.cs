@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BD_APP
 {
-    public partial class Client : Form
+    public partial class Caixas : Form
     {
-        public Client()
+        public Caixas()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Caixas_Load(object sender, EventArgs e)
         {
 
         }

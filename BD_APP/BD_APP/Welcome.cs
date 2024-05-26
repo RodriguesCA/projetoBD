@@ -41,7 +41,7 @@ namespace BD_APP
             total_revenue.Hide();
             billing_container.Hide();
             logo.Location = new Point(285, 130); // Logo to the middle
-            button_add_client.Hide();           
+            button_add_client.Hide();
             button_rem_client.Hide();           // Hide Client Menu
             button_up_client.Hide();
             billing_container.Hide();
@@ -57,7 +57,7 @@ namespace BD_APP
             button_up_client.Show();
             button_up_client.Enabled = true;            // Show Client Menu
             button_rem_client.Show();
-            button_rem_client.Enabled=true;
+            button_rem_client.Enabled = true;
             button_add_client.Show();
             button_add_client.Enabled = true;
             button_up_employe.Hide();                   // Hide Employe Menu
@@ -70,7 +70,7 @@ namespace BD_APP
             n_purchases_value.Hide();
             revenue_value.Hide();
             total_revenue.Hide();
-           
+
 
 
 
@@ -80,8 +80,8 @@ namespace BD_APP
         {
             logo.Location = new Point(285, 130);    // Logo to the middle
             button_staff.Hide();
-            button_new_product.Hide(); 
-                                                    // Hide Manager Menu
+            button_new_product.Hide();
+            // Hide Manager Menu
             button_billing.Hide();
             n_purchases.Hide();
             n_purchases_value.Hide();
@@ -111,7 +111,7 @@ namespace BD_APP
             revenue_value.Show();
             total_revenue.Show();
             billing_container.Show();
-           
+
         }
 
 
@@ -138,5 +138,10 @@ namespace BD_APP
             button_new_product.Hide();
         }
 
+        private void button_shop_Click(object sender, EventArgs e)
+        {
+            Secções frm = new();
+            frm.Show();
+        }
     }
 }
