@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\fatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\fatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\caixas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\sec\u00E7\u00F5es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Sec\u00E7\u00F5es.cs",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs",
               "RelativeDocumentMoniker": "BD_APP\\Sec\u00E7\u00F5es.cs",
@@ -60,7 +64,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Fatura.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Fatura.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Fatura.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Fatura.cs [Design]",
+              "RelativeToolTip": "BD_APP\\Fatura.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T21:46:22.128Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Caixas.cs",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs",
               "RelativeDocumentMoniker": "BD_APP\\Caixas.cs",
@@ -73,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Caixas.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Caixas.cs",
               "RelativeDocumentMoniker": "BD_APP\\Caixas.cs",
@@ -84,12 +104,8 @@
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sec\u00E7\u00F5es.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Sec\u00E7\u00F5es.cs",
               "RelativeDocumentMoniker": "BD_APP\\Sec\u00E7\u00F5es.cs",
@@ -101,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Welcome.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
@@ -113,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Inicio.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs",
               "RelativeDocumentMoniker": "BD_APP\\Inicio.cs",
@@ -125,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Inicio.cs",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Inicio.cs",
               "RelativeDocumentMoniker": "BD_APP\\Inicio.cs",
@@ -138,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Welcome.cs",
               "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",

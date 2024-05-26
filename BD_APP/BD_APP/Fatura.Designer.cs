@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Fatura";
+            label_title = new Label();
+            button_ok = new Button();
+            SuspendLayout();
+            // 
+            // label_title
+            // 
+            label_title.AutoSize = true;
+            label_title.Font = new Font("Segoe UI", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_title.Location = new Point(152, 25);
+            label_title.Name = "label_title";
+            label_title.Size = new Size(134, 51);
+            label_title.TabIndex = 0;
+            label_title.Text = "Fatura";
+            // 
+            // button_ok
+            // 
+            button_ok.BackColor = Color.OliveDrab;
+            button_ok.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_ok.Location = new Point(164, 508);
+            button_ok.Name = "button_ok";
+            button_ok.Size = new Size(112, 34);
+            button_ok.TabIndex = 1;
+            button_ok.Text = "OK";
+            button_ok.UseVisualStyleBackColor = false;
+            // 
+            // Fatura
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(460, 565);
+            Controls.Add(button_ok);
+            Controls.Add(label_title);
+            Name = "Fatura";
+            Text = "Fatura";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label_title;
+        private Button button_ok;
     }
 }
