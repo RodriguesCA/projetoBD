@@ -63,11 +63,22 @@ CREATE TABLE Compra_Produto(
     FOREIGN KEY (C_Produto) REFERENCES Produto (Codigo)
 );
 
-CREATE TABLE Caixista(
-    N_Caixa       INTEGER        ,
-    N_Caixista    INTEGER        NOT NULL,
+CREATE TABLE Caixa (
+    N_Caixa       INTEGER        NOT NULL   UNIQUE,
+    N_Caixista    INTEGER,
+    Estado        BIT,
 
-    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado)
+    PRIMARY KEY(N_Caixa),
+    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado),
+);
+
+
+CREATE TABLE Caixista(
+    N_Caixa       INTEGER,
+    N_Caixista    INTEGER        NOT NULL,
+	
+    FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado),
+    FOREIGN KEY(N_Caixa) REFERENCES Caixa(N_Caixa)
 );
 
 CREATE TABLE Lojista(
@@ -85,15 +96,6 @@ CREATE TABLE Armazem(
 
     FOREIGN KEY(C_Produto) REFERENCES Produto(Codigo),
     FOREIGN KEY(T_Seccao)  REFERENCES Seccao(Tipo)
-);
-
-CREATE TABLE Caixa (
-    N_Caixa       INTEGER        NOT NULL,
-    N_Caixista    INTEGER        ,
-    Estado        BOOLEAN        NOT NULL,
-
-    PRIMARY KEY(N_Caixa),
-    FOREIGN KEY(N_Caixista) REFERENCES Caixista(N_Caixista),
 );
 
 

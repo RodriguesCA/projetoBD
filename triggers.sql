@@ -1,4 +1,7 @@
 /* TRIGGER */
+USE MiniMercado
+GO
+
 /* UM EMPREGADO NAO PODE SER CAIXISTA E LOJISTA */
 CREATE TRIGGER ValidarCaixista ON Caixista
 AFTER INSERT, UPDATE
@@ -84,7 +87,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    IF EXISTS(SELECT 1 FROM inserted i JOIN Produto ON i.C_Produto=p.Codigo WHERE Unidades=0)
+    IF EXISTS(SELECT 1 FROM inserted i JOIN Produto p ON i.C_Produto=p.Codigo WHERE Unidades=0)
     BEGIN
         RAISERROR('O produto tem 0 unidades. Não pode adicionado à compra.', 16, 1);
         ROLLBACK TRAN;
