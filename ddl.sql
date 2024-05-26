@@ -26,7 +26,7 @@ CREATE TABLE Produto(
     Tipo_Seccao   VARCHAR(50),
     Preco         DECIMAL(10, 2),
     IVA           INTEGER        NOT NULL,
-    Unidades      INTEGER        CHECK(Unidades > 0),
+    Unidades      INTEGER,
 
     PRIMARY KEY ( Codigo ),
     FOREIGN KEY ( Tipo_Seccao ) REFERENCES Seccao ( Tipo )
