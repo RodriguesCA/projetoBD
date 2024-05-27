@@ -11,7 +11,7 @@ namespace BD_APP
 
             button_add_client.Hide();               // Hide Client menu
             button_rem_client.Hide();
-            button_up_client.Hide();
+            
 
             button_up_employe.Hide();               // Hide Employe menu
             button_rem_employe.Hide();
@@ -61,7 +61,6 @@ namespace BD_APP
             logo.Location = new Point(285, 130); // Logo to the middle
             button_add_client.Hide();
             button_rem_client.Hide();           // Hide Client Menu
-            button_up_client.Hide();
             button_def_add_c.Hide();
             label_add_client.Hide();            // Hide add client
             textBox_nif_c.Hide();
@@ -80,10 +79,8 @@ namespace BD_APP
 
         private void button_client_Click(object sender, EventArgs e)
         {
-            logo.Location = new Point(285, 130);        // Logo the middle
-            button_up_client.Show();
-            button_up_client.Enabled = true;            // Show Client Menu
-            button_rem_client.Show();
+            logo.Location = new Point(285, 130);        // Logo the middle            
+            button_rem_client.Show();                   // Show Client Menu
             button_rem_client.Enabled = true;
             button_add_client.Show();
             button_add_client.Enabled = true;
@@ -126,7 +123,6 @@ namespace BD_APP
             billing_container.Hide();
             button_add_client.Hide();                // Hide Client Menu
             button_rem_client.Hide();
-            button_up_client.Hide();
             button_def_add_c.Hide();
             label_add_client.Hide();
             textBox_nif_c.Hide();
