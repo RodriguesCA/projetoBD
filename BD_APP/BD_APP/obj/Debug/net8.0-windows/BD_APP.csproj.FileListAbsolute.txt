@@ -42,3 +42,4 @@ C:\Users\jmzez\OneDrive\Documentos\GitHub\projetoBD\BD_APP\BD_APP\obj\Debug\net8
 C:\Users\jmzez\OneDrive\Documentos\GitHub\projetoBD\BD_APP\BD_APP\obj\Debug\net8.0-windows\ref\BD_APP.dll
 C:\Users\jmzez\OneDrive\Documentos\GitHub\projetoBD\BD_APP\BD_APP\obj\Debug\net8.0-windows\BD_APP.Secções.resources
 C:\Users\jmzez\OneDrive\Documentos\GitHub\projetoBD\BD_APP\BD_APP\obj\Debug\net8.0-windows\BD_APP.Caixas.resources
+C:\Users\jmzez\OneDrive\Documentos\GitHub\projetoBD\BD_APP\BD_APP\obj\Debug\net8.0-windows\BD_APP.Fatura.resources
