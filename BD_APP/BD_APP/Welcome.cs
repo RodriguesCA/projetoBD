@@ -1,19 +1,24 @@
+using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+
 namespace BD_APP
 {
     public partial class Welcome : Form
     {
+        private SqlConnection cn;
+        
         public Welcome()
         {
             InitializeComponent();
             button_billing.Hide();                  // Hide Manager menu
             button_staff.Hide();
-            button_new_product.Hide();
 
             button_add_client.Hide();               // Hide Client menu
             button_rem_client.Hide();
             
 
-            button_up_employe.Hide();               // Hide Employe menu
             button_rem_employe.Hide();
             button_add_employe.Hide();
 
@@ -42,7 +47,12 @@ namespace BD_APP
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cn = getSGBDConnection();
+        }
 
+        private SqlConnection getSGBDConnection()
+        {
+            return new SQLConnection("data source= JORDAO-GRAM\\SQLEXPRESS; integrated security=true; initial catalog=MiniMercado");
         }
 
         private void button_manager_Click(object sender, EventArgs e)

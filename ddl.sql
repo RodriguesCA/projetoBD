@@ -63,7 +63,7 @@ CREATE TABLE Compra_Produto(
     FOREIGN KEY (C_Produto) REFERENCES Produto (Codigo)
 );
 
-CREATE TABLE Caixa (
+CREATE TABLE Caixa(
     N_Caixa       INTEGER        NOT NULL   UNIQUE,
     N_Caixista    INTEGER,
     Estado        BIT,

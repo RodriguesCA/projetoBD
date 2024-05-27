@@ -36,14 +36,12 @@
             logo = new Label();
             button_billing = new Button();
             button_staff = new Button();
-            button_new_product = new Button();
             button7 = new Button();
             button_add_client = new Button();
             button_rem_client = new Button();
             billing_container = new Label();
             button_add_employe = new Button();
             button_rem_employe = new Button();
-            button_up_employe = new Button();
             revenue_value = new TextBox();
             total_revenue = new Label();
             n_purchases = new Label();
@@ -143,18 +141,6 @@
             button_staff.Text = "Manage Staff";
             button_staff.UseVisualStyleBackColor = true;
             // 
-            // button_new_product
-            // 
-            button_new_product.FlatStyle = FlatStyle.System;
-            button_new_product.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_new_product.Location = new Point(33, 270);
-            button_new_product.Name = "button_new_product";
-            button_new_product.Size = new Size(149, 59);
-            button_new_product.TabIndex = 7;
-            button_new_product.Text = "New Product";
-            button_new_product.UseVisualStyleBackColor = true;
-            button_new_product.Click += button6_Click;
-            // 
             // button7
             // 
             button7.BackColor = Color.IndianRed;
@@ -223,17 +209,6 @@
             button_rem_employe.TabIndex = 14;
             button_rem_employe.Text = "Remove Employe";
             button_rem_employe.UseVisualStyleBackColor = true;
-            // 
-            // button_up_employe
-            // 
-            button_up_employe.FlatStyle = FlatStyle.System;
-            button_up_employe.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_up_employe.Location = new Point(33, 270);
-            button_up_employe.Name = "button_up_employe";
-            button_up_employe.Size = new Size(149, 59);
-            button_up_employe.TabIndex = 15;
-            button_up_employe.Text = "Update Employe";
-            button_up_employe.UseVisualStyleBackColor = true;
             // 
             // revenue_value
             // 
@@ -406,14 +381,12 @@
             Controls.Add(n_purchases);
             Controls.Add(total_revenue);
             Controls.Add(revenue_value);
-            Controls.Add(button_up_employe);
             Controls.Add(button_rem_employe);
             Controls.Add(button_add_employe);
             Controls.Add(billing_container);
             Controls.Add(button_rem_client);
             Controls.Add(button_add_client);
             Controls.Add(button7);
-            Controls.Add(button_new_product);
             Controls.Add(button_staff);
             Controls.Add(button_billing);
             Controls.Add(logo);
@@ -437,14 +410,12 @@
         private Label logo;
         private Button button_billing;
         private Button button_staff;
-        private Button button_new_product;
         private Button button7;
         private Button button_add_client;
         private Button button_rem_client;
         private Label billing_container;
         private Button button_add_employe;
         private Button button_rem_employe;
-        private Button button_up_employe;
         private TextBox revenue_value;
         private Label total_revenue;
         private Label n_purchases;
