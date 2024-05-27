@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BD_APP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+760a765bd22a5d19eb145c0f9a1a885ed47a81db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed7cc1c1a1cd2f1dbdb3b49a7d7ef7d3ecb1934e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BD_APP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BD_APP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

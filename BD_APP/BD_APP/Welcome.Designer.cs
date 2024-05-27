@@ -40,7 +40,6 @@
             button7 = new Button();
             button_add_client = new Button();
             button_rem_client = new Button();
-            button_up_client = new Button();
             billing_container = new Label();
             button_add_employe = new Button();
             button_rem_employe = new Button();
@@ -50,6 +49,16 @@
             n_purchases = new Label();
             n_purchases_value = new TextBox();
             button_shop = new Button();
+            textBox_nome_c = new TextBox();
+            label_nome_c = new Label();
+            label_nif_c = new Label();
+            textBox_nif_c = new TextBox();
+            label_add_client = new Label();
+            button_def_add_c = new Button();
+            label_rem_c = new Label();
+            label_nif_rem_c = new Label();
+            textBox_rem_nif_c = new TextBox();
+            button_def_rem_c = new Button();
             SuspendLayout();
             // 
             // button_manager
@@ -169,6 +178,7 @@
             button_add_client.TabIndex = 9;
             button_add_client.Text = "Add Client";
             button_add_client.UseVisualStyleBackColor = true;
+            button_add_client.Click += button_add_client_Click_1;
             // 
             // button_rem_client
             // 
@@ -180,17 +190,7 @@
             button_rem_client.TabIndex = 10;
             button_rem_client.Text = "Remove Client";
             button_rem_client.UseVisualStyleBackColor = true;
-            // 
-            // button_up_client
-            // 
-            button_up_client.FlatStyle = FlatStyle.System;
-            button_up_client.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_up_client.Location = new Point(33, 270);
-            button_up_client.Name = "button_up_client";
-            button_up_client.Size = new Size(149, 59);
-            button_up_client.TabIndex = 11;
-            button_up_client.Text = "Update Client";
-            button_up_client.UseVisualStyleBackColor = true;
+            button_rem_client.Click += button_rem_client_Click;
             // 
             // billing_container
             // 
@@ -286,12 +286,121 @@
             button_shop.UseVisualStyleBackColor = false;
             button_shop.Click += button_shop_Click;
             // 
+            // textBox_nome_c
+            // 
+            textBox_nome_c.Location = new Point(429, 234);
+            textBox_nome_c.Name = "textBox_nome_c";
+            textBox_nome_c.Size = new Size(197, 31);
+            textBox_nome_c.TabIndex = 25;
+            // 
+            // label_nome_c
+            // 
+            label_nome_c.AutoSize = true;
+            label_nome_c.BackColor = Color.WhiteSmoke;
+            label_nome_c.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_nome_c.Location = new Point(262, 231);
+            label_nome_c.Name = "label_nome_c";
+            label_nome_c.Size = new Size(86, 32);
+            label_nome_c.TabIndex = 24;
+            label_nome_c.Text = "Nome:";
+            // 
+            // label_nif_c
+            // 
+            label_nif_c.AutoSize = true;
+            label_nif_c.BackColor = Color.WhiteSmoke;
+            label_nif_c.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_nif_c.Location = new Point(262, 331);
+            label_nif_c.Name = "label_nif_c";
+            label_nif_c.Size = new Size(57, 32);
+            label_nif_c.TabIndex = 23;
+            label_nif_c.Text = "NIF:";
+            // 
+            // textBox_nif_c
+            // 
+            textBox_nif_c.Location = new Point(429, 337);
+            textBox_nif_c.Name = "textBox_nif_c";
+            textBox_nif_c.Size = new Size(197, 31);
+            textBox_nif_c.TabIndex = 22;
+            // 
+            // label_add_client
+            // 
+            label_add_client.BackColor = Color.WhiteSmoke;
+            label_add_client.Font = new Font("Segoe UI Black", 19F, FontStyle.Bold);
+            label_add_client.Location = new Point(243, 113);
+            label_add_client.Name = "label_add_client";
+            label_add_client.Size = new Size(450, 400);
+            label_add_client.TabIndex = 21;
+            label_add_client.Text = "Add Client";
+            // 
+            // button_def_add_c
+            // 
+            button_def_add_c.BackColor = Color.IndianRed;
+            button_def_add_c.FlatStyle = FlatStyle.Popup;
+            button_def_add_c.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_def_add_c.Location = new Point(385, 430);
+            button_def_add_c.Margin = new Padding(5, 3, 3, 3);
+            button_def_add_c.Name = "button_def_add_c";
+            button_def_add_c.Size = new Size(146, 44);
+            button_def_add_c.TabIndex = 26;
+            button_def_add_c.Text = "Add";
+            button_def_add_c.UseVisualStyleBackColor = false;
+            // 
+            // label_rem_c
+            // 
+            label_rem_c.BackColor = Color.WhiteSmoke;
+            label_rem_c.Font = new Font("Segoe UI Black", 19F, FontStyle.Bold);
+            label_rem_c.Location = new Point(243, 113);
+            label_rem_c.Name = "label_rem_c";
+            label_rem_c.Size = new Size(450, 400);
+            label_rem_c.TabIndex = 27;
+            label_rem_c.Text = "Remove Client";
+            // 
+            // label_nif_rem_c
+            // 
+            label_nif_rem_c.AutoSize = true;
+            label_nif_rem_c.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_nif_rem_c.Location = new Point(276, 234);
+            label_nif_rem_c.Name = "label_nif_rem_c";
+            label_nif_rem_c.Size = new Size(62, 36);
+            label_nif_rem_c.TabIndex = 28;
+            label_nif_rem_c.Text = "NIF:";
+            // 
+            // textBox_rem_nif_c
+            // 
+            textBox_rem_nif_c.Location = new Point(399, 240);
+            textBox_rem_nif_c.Name = "textBox_rem_nif_c";
+            textBox_rem_nif_c.Size = new Size(150, 31);
+            textBox_rem_nif_c.TabIndex = 29;
+            // 
+            // button_def_rem_c
+            // 
+            button_def_rem_c.BackColor = Color.IndianRed;
+            button_def_rem_c.FlatStyle = FlatStyle.Popup;
+            button_def_rem_c.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            button_def_rem_c.Location = new Point(394, 369);
+            button_def_rem_c.Margin = new Padding(5, 3, 3, 3);
+            button_def_rem_c.Name = "button_def_rem_c";
+            button_def_rem_c.Size = new Size(155, 58);
+            button_def_rem_c.TabIndex = 30;
+            button_def_rem_c.Text = "Remove";
+            button_def_rem_c.UseVisualStyleBackColor = false;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1186, 764);
+            Controls.Add(button_def_rem_c);
+            Controls.Add(textBox_rem_nif_c);
+            Controls.Add(label_nif_rem_c);
+            Controls.Add(label_rem_c);
+            Controls.Add(button_def_add_c);
+            Controls.Add(textBox_nome_c);
+            Controls.Add(label_nome_c);
+            Controls.Add(label_nif_c);
+            Controls.Add(textBox_nif_c);
+            Controls.Add(label_add_client);
             Controls.Add(button_shop);
             Controls.Add(n_purchases_value);
             Controls.Add(n_purchases);
@@ -301,7 +410,6 @@
             Controls.Add(button_rem_employe);
             Controls.Add(button_add_employe);
             Controls.Add(billing_container);
-            Controls.Add(button_up_client);
             Controls.Add(button_rem_client);
             Controls.Add(button_add_client);
             Controls.Add(button7);
@@ -333,7 +441,6 @@
         private Button button7;
         private Button button_add_client;
         private Button button_rem_client;
-        private Button button_up_client;
         private Label billing_container;
         private Button button_add_employe;
         private Button button_rem_employe;
@@ -343,5 +450,15 @@
         private Label n_purchases;
         private TextBox n_purchases_value;
         private Button button_shop;
+        private TextBox textBox_nome_c;
+        private Label label_nome_c;
+        private Label label_nif_c;
+        private TextBox textBox_nif_c;
+        private Label label_add_client;
+        private Button button_def_add_c;
+        private Label label_rem_c;
+        private Label label_nif_rem_c;
+        private TextBox textBox_rem_nif_c;
+        private Button button_def_rem_c;
     }
 }
