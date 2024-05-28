@@ -3,56 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|c:\\users\\jmzez\\onedrive\\documentos\\github\\projetobd\\bd_app\\bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF900F98-5695-4E01-A3D8-1F75E0ED034E}|BD_APP\\BD_APP.csproj|solutionrelative:bd_app\\welcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Welcome.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
-              "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
-              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs [Design]",
-              "RelativeToolTip": "BD_APP\\Welcome.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T14:32:23.096Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Welcome.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
-              "RelativeDocumentMoniker": "BD_APP\\Welcome.Designer.cs",
-              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
-              "RelativeToolTip": "BD_APP\\Welcome.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMYBAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T14:12:34.207Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -61,10 +32,46 @@
               "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
               "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
               "RelativeToolTip": "BD_APP\\Welcome.cs",
-              "ViewState": "AQIAALYAAAAAAAAAAAAUwMUAAAAfAAAA",
+              "ViewState": "AQIAAFABAAAAAAAAAAAAwFcBAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T00:03:18.96Z",
+              "WhenOpened": "2024-05-27T23:53:10.579Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Welcome.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Welcome.Designer.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.Designer.cs",
+              "RelativeToolTip": "BD_APP\\Welcome.Designer.cs",
+              "ViewState": "AQIAAPUAAAAAAAAAAAAewPoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:49:29.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Welcome.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs",
+              "RelativeDocumentMoniker": "BD_APP\\Welcome.cs",
+              "ToolTip": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\Welcome.cs [Design]",
+              "RelativeToolTip": "BD_APP\\Welcome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:58:03.293Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

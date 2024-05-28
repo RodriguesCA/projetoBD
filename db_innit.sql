@@ -34,7 +34,7 @@ INSERT INTO Caixista VALUES ('3', '3')
 
 INSERT INTO Lojista VALUES ('Bebidas', '4')
 INSERT INTO Lojista VALUES ('Carne', '5')
-INSERT INTO Lojista VALUES ('Frutas e Vegetais', '6')
+INSERT INTO Lojista VALUES ('Fruta e Vegetais', '6')
 
 /* ------ Cria��o de Produtos ------- */
 

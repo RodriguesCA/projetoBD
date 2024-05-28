@@ -30,22 +30,21 @@ BEGIN
 	INSERT INTO Caixista VALUES (@T_Seccao, @N_Lojista);	
 END
 
-/* REMOVER CAIXISTA - ATUALIZAR EMPREGADOS */
+/* REMOVER EMPREGADO - ATUALIZAR EMPREGADOS */
 GO
-CREATE PROC removeCaixista @N_Caixista INTEGER
+CREATE PROC removeEmpregado @N_Empregado INTEGER
 AS 
 BEGIN
-	DELETE FROM Caixista WHERE N_Caixista=@N_Caixista;
-	DELETE FROM Empregado WHERE N_Empregado=@N_Caixista;
-END
-
-/* REMOVER LOJISTA - ATUALIZAR EMPREGADOS */
-GO 
-CREATE PROC removeLojista @N_Lojista	INTEGER 
-AS 
-BEGIN
-	DELETE FROM Lojista WHERE N_Lojista=@N_Lojista;
-	DELETE FROM Empregado WHERE N_Empregado=@N_Lojista;
+	IF EXISTS (SELECT 1 FROM Caixista WHERE N_Caixista=@N_Empregado)
+	BEGIN
+		DELETE FROM Caixista WHERE N_Caixista=@N_Empregado;
+		DELETE FROM Empregado WHERE N_Empregado=@N_Empregado;
+	END
+	IF EXISTS (SELECT 1 FROM Lojista WHERE N_Lojista=@N_Empregado)
+	BEGIN
+		DELETE FROM Lojista WHERE N_Lojista=@N_Empregado;
+		DELETE FROM Empregado WHERE N_Empregado=@N_Empregado;
+	END
 END
 
 /* REPOR PRODUTO - ADICIONAR PRODUTO, REMOVER ARMAZ�M */
@@ -104,11 +103,11 @@ BEGIN
 
 	INSERT INTO Cliente (Nome, NIF) VALUES (@nomeCliente, @nifCliente);
 		
-	SELECT TOP 1 @numeroCaixista=N_Caixista FROM Caixista ORDER BY NEWID();
+/*	SELECT TOP 1 @numeroCaixista=N_Caixista FROM Caixista ORDER BY NEWID();
 
 	SET @numeroCompra = (SELECT ISNULL(MAX(N_Compra), 0) + 1 FROM Compra);
 
-	INSERT INTO Compra (c_Data, N_Compra, N_Empregado, NIF_Cliente) VALUES (GETDATE(), @numeroCompra, @numeroCaixista, @nifCliente);
+	INSERT INTO Compra (c_Data, N_Compra, N_Empregado, NIF_Cliente) VALUES (GETDATE(), @numeroCompra, @numeroCaixista, @nifCliente);*/
 END
 
 /* ADICIONAR PRODUTOS A COMPRA - ATUALIAZR PRODUTOS, ADICIONAR COMPRA_PRODUTO */
@@ -124,7 +123,7 @@ BEGIN
 	DECLARE @unidadesDisponiveis INTEGER
 
 
-	IF EXISTS (SELECT 1 FROM CLIENTE WHERE NIF=@nifCliente)
+	IF EXISTS (SELECT 1 FROM Cliente WHERE NIF=@nifCliente)
 	BEGIN
 		SELECT @numeroCompra=N_Compra FROM Compra WHERE NIF_Cliente=@nifCliente;
 		SELECT @unidadesDisponiveis=Unidades FROM Produto WHERE Codigo=@codigoProduto;
