@@ -46,7 +46,7 @@
             label_rem_c = new Label();
             label_nif_rem_c = new Label();
             textBox_rem_nif_c = new TextBox();
-            button_def_rem_c = new Button();
+            button_def_rem_e = new Button();
             label_add_lojista = new Label();
             button1_add_lojista = new Button();
             label_nome_lojista = new Label();
@@ -73,11 +73,16 @@
             label_sal_caixista = new Label();
             textBox_sal_caixista = new TextBox();
             label_caixa_caixista = new Label();
-            listBox_caixa_caxista = new ListBox();
             button1_add_caixista = new Button();
             comboBox_seccoes = new ComboBox();
             dataGridView_empregados = new DataGridView();
+            comboBox_caixas = new ComboBox();
+            label2 = new Label();
+            label_id_rem = new Label();
+            textBox_rem_empregado = new TextBox();
+            dataGridView_clientes = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView_empregados).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_clientes).BeginInit();
             SuspendLayout();
             // 
             // button_empregados
@@ -268,18 +273,19 @@
             textBox_rem_nif_c.Size = new Size(272, 31);
             textBox_rem_nif_c.TabIndex = 29;
             // 
-            // button_def_rem_c
+            // button_def_rem_e
             // 
-            button_def_rem_c.BackColor = Color.IndianRed;
-            button_def_rem_c.FlatStyle = FlatStyle.Popup;
-            button_def_rem_c.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            button_def_rem_c.Location = new Point(635, 452);
-            button_def_rem_c.Margin = new Padding(5, 3, 3, 3);
-            button_def_rem_c.Name = "button_def_rem_c";
-            button_def_rem_c.Size = new Size(133, 48);
-            button_def_rem_c.TabIndex = 30;
-            button_def_rem_c.Text = "Remove";
-            button_def_rem_c.UseVisualStyleBackColor = false;
+            button_def_rem_e.BackColor = Color.IndianRed;
+            button_def_rem_e.FlatStyle = FlatStyle.Popup;
+            button_def_rem_e.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            button_def_rem_e.Location = new Point(621, 438);
+            button_def_rem_e.Margin = new Padding(5, 3, 3, 3);
+            button_def_rem_e.Name = "button_def_rem_e";
+            button_def_rem_e.Size = new Size(133, 48);
+            button_def_rem_e.TabIndex = 30;
+            button_def_rem_e.Text = "Remover";
+            button_def_rem_e.UseVisualStyleBackColor = false;
+            button_def_rem_e.Click += button_def_rem_e_Click;
             // 
             // label_add_lojista
             // 
@@ -326,9 +332,9 @@
             label_num_lojista.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label_num_lojista.Location = new Point(337, 231);
             label_num_lojista.Name = "label_num_lojista";
-            label_num_lojista.Size = new Size(92, 28);
+            label_num_lojista.Size = new Size(37, 28);
             label_num_lojista.TabIndex = 35;
-            label_num_lojista.Text = "Número:";
+            label_num_lojista.Text = "ID:";
             // 
             // label_nif_lojista
             // 
@@ -461,9 +467,9 @@
             label_num_caixista.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label_num_caixista.Location = new Point(337, 228);
             label_num_caixista.Name = "label_num_caixista";
-            label_num_caixista.Size = new Size(92, 28);
+            label_num_caixista.Size = new Size(37, 28);
             label_num_caixista.TabIndex = 50;
-            label_num_caixista.Text = "Número:";
+            label_num_caixista.Text = "ID:";
             // 
             // textBox_num_caixista
             // 
@@ -531,20 +537,11 @@
             label_caixa_caixista.AutoSize = true;
             label_caixa_caixista.BackColor = Color.WhiteSmoke;
             label_caixa_caixista.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            label_caixa_caixista.Location = new Point(337, 422);
+            label_caixa_caixista.Location = new Point(337, 419);
             label_caixa_caixista.Name = "label_caixa_caixista";
             label_caixa_caixista.Size = new Size(173, 28);
             label_caixa_caixista.TabIndex = 58;
             label_caixa_caixista.Text = "Número da Caixa:";
-            // 
-            // listBox_caixa_caxista
-            // 
-            listBox_caixa_caxista.FormattingEnabled = true;
-            listBox_caixa_caxista.ItemHeight = 25;
-            listBox_caixa_caxista.Location = new Point(516, 421);
-            listBox_caixa_caxista.Name = "listBox_caixa_caxista";
-            listBox_caixa_caxista.Size = new Size(164, 29);
-            listBox_caixa_caxista.TabIndex = 59;
             // 
             // button1_add_caixista
             // 
@@ -559,6 +556,7 @@
             button1_add_caixista.TabIndex = 60;
             button1_add_caixista.Text = "Adicionar";
             button1_add_caixista.UseVisualStyleBackColor = false;
+            button1_add_caixista.Click += button1_add_caixista_Click;
             // 
             // comboBox_seccoes
             // 
@@ -570,12 +568,60 @@
             // 
             // dataGridView_empregados
             // 
+            dataGridView_empregados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_empregados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_empregados.Location = new Point(231, 542);
+            dataGridView_empregados.Location = new Point(33, 530);
             dataGridView_empregados.Name = "dataGridView_empregados";
             dataGridView_empregados.RowHeadersWidth = 62;
-            dataGridView_empregados.Size = new Size(837, 225);
+            dataGridView_empregados.Size = new Size(1253, 225);
             dataGridView_empregados.TabIndex = 62;
+            // 
+            // comboBox_caixas
+            // 
+            comboBox_caixas.FormattingEnabled = true;
+            comboBox_caixas.Location = new Point(523, 414);
+            comboBox_caixas.Name = "comboBox_caixas";
+            comboBox_caixas.Size = new Size(185, 33);
+            comboBox_caixas.TabIndex = 63;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.WhiteSmoke;
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(318, 110);
+            label2.Name = "label2";
+            label2.Size = new Size(467, 403);
+            label2.TabIndex = 64;
+            label2.Text = "Remover Empregado";
+            // 
+            // label_id_rem
+            // 
+            label_id_rem.AutoSize = true;
+            label_id_rem.BackColor = Color.WhiteSmoke;
+            label_id_rem.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_id_rem.Location = new Point(337, 220);
+            label_id_rem.Name = "label_id_rem";
+            label_id_rem.Size = new Size(108, 36);
+            label_id_rem.TabIndex = 65;
+            label_id_rem.Text = "Código:";
+            // 
+            // textBox_rem_empregado
+            // 
+            textBox_rem_empregado.Location = new Point(452, 228);
+            textBox_rem_empregado.Name = "textBox_rem_empregado";
+            textBox_rem_empregado.Size = new Size(274, 31);
+            textBox_rem_empregado.TabIndex = 66;
+            // 
+            // dataGridView_clientes
+            // 
+            dataGridView_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_clientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_clientes.Location = new Point(33, 530);
+            dataGridView_clientes.Name = "dataGridView_clientes";
+            dataGridView_clientes.RowHeadersWidth = 62;
+            dataGridView_clientes.Size = new Size(1253, 225);
+            dataGridView_clientes.TabIndex = 67;
             // 
             // Welcome
             // 
@@ -583,6 +629,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1322, 779);
+            Controls.Add(dataGridView_clientes);
+            Controls.Add(textBox_rem_empregado);
+            Controls.Add(label_id_rem);
+            Controls.Add(button_def_rem_e);
+            Controls.Add(label2);
+            Controls.Add(comboBox_caixas);
             Controls.Add(dataGridView_empregados);
             Controls.Add(comboBox_seccoes);
             Controls.Add(button_add_caixista);
@@ -595,10 +647,8 @@
             Controls.Add(button_empregados);
             Controls.Add(label_nif_rem_c);
             Controls.Add(textBox_rem_nif_c);
-            Controls.Add(button_def_rem_c);
             Controls.Add(label_sec_lojista);
             Controls.Add(button1_add_caixista);
-            Controls.Add(listBox_caixa_caxista);
             Controls.Add(label_caixa_caixista);
             Controls.Add(textBox_sal_caixista);
             Controls.Add(label_sal_caixista);
@@ -610,7 +660,6 @@
             Controls.Add(label_num_caixista);
             Controls.Add(textBox_name_caixista);
             Controls.Add(label_name_caixista);
-            Controls.Add(label_add_caixista);
             Controls.Add(textBox_sal_lojista);
             Controls.Add(textBox_horas_lojista);
             Controls.Add(textBox_nif_lojista);
@@ -631,10 +680,12 @@
             Controls.Add(label_add_client);
             Controls.Add(label_add_lojista);
             Controls.Add(label_rem_c);
+            Controls.Add(label_add_caixista);
             Name = "Welcome";
             Text = "Index";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_empregados).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_clientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -685,10 +736,15 @@
         private Label label_sal_caixista;
         private TextBox textBox_sal_caixista;
         private Label label_caixa_caixista;
-        private ListBox listBox_caixa_caxista;
         private Button button1_add_caixista;
         private Label label_add_caixista;
         private ComboBox comboBox_seccoes;
         private DataGridView dataGridView_empregados;
+        private ComboBox comboBox_caixas;
+        private Button button_def_rem_e;
+        private Label label_id_rem;
+        private TextBox textBox_rem_empregado;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView_clientes;
     }
 }
