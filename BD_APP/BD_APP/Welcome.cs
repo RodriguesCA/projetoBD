@@ -68,7 +68,7 @@ namespace BD_APP
             textBox_num_lojista.Hide();
             list_sec_lojista.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
 
 
 
@@ -84,11 +84,12 @@ namespace BD_APP
         private void Form1_Load(object sender, EventArgs e)
         {
             cn = getSGBDConnection();
+            loadEmpregados();
         }
 
         private SqlConnection getSGBDConnection()
         {
-            return new SqlConnection("data source= JORDAO-GRAM\\SQLEXPRESS; integrated security=true; initial catalog=MiniMercado");
+            return new SqlConnection("data source= AFONSOCR; integrated security=true; initial catalog=MiniMercado");
         }
 
         private bool verifySGBDConnection()
@@ -101,6 +102,31 @@ namespace BD_APP
             return cn.State == ConnectionState.Open;
         }
 
+        private void loadEmpregados()
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE");
+                return;
+            }
+
+            try {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+                string query = "SELECT * FROM Empregado";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                dataGridView_empregados.DataSource = dataTable;
+            } catch (Exception ex) {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
         private void button_manager_Click(object sender, EventArgs e)
         {
             logo.Location = new Point(385, 130);// Logo to the middle
@@ -119,7 +145,7 @@ namespace BD_APP
             button_rem_employe.Show();          // Show Employe Menu
             button_add_lojista.Show();
             button_add_caixista.Show();
-            list_empregados.Show();             // Hide lista de Empregados
+            dataGridView_empregados.Show();             // Hide lista de Empregados
 
         }
 
@@ -179,7 +205,7 @@ namespace BD_APP
             textBox_num_lojista.Hide();
             list_sec_lojista.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
         }
 
         private void button_inventario_Click(object sender, EventArgs e)
@@ -197,8 +223,8 @@ namespace BD_APP
             label_rem_c.Hide();
             label_nif_rem_c.Hide();
             textBox_rem_nif_c.Hide();
-            button_add_lojista.Show();              // Show Employee Menu
-            button_rem_employe.Show();
+            button_add_lojista.Hide();              // Show Employee Menu
+            button_rem_employe.Hide();
             button_add_lojista.Enabled = true;
             button_rem_employe.Enabled = true;
             button_rem_employe.Hide();              // Hide Employe Menu
@@ -237,8 +263,10 @@ namespace BD_APP
             textBox_num_lojista.Hide();
             list_sec_lojista.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
 
+            Inventario frm = new();
+            frm.Show();
 
         }
 
@@ -305,7 +333,7 @@ namespace BD_APP
             button_def_add_c.Hide();
         }
 
-        
+
 
         private void button_def_add_c_Click(object sender, EventArgs e)
         {

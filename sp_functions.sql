@@ -27,7 +27,7 @@ CREATE PROC addLojista	@Nome			VARCHAR(30),
 AS
 BEGIN
 	INSERT INTO Empregado VALUES (@Nome, @NIF, @N_Lojista, @N_Horas, @Salario);
-	INSERT INTO Caixista VALUES (@T_Seccao, @N_Lojista);	
+	INSERT INTO Lojista VALUES (@T_Seccao, @N_Lojista);	
 END
 
 /* REMOVER EMPREGADO - ATUALIZAR EMPREGADOS */
@@ -49,8 +49,7 @@ END
 
 /* REPOR PRODUTO - ADICIONAR PRODUTO, REMOVER ARMAZ�M */
 GO 
-CREATE PROC reporProduto @codigoProduto		INTEGER,
-						 @tipoSeccao		VARCHAR(50)
+CREATE PROC reporProduto @codigoProduto		INTEGER
 AS 
 BEGIN 
 	BEGIN TRAN;
@@ -59,7 +58,7 @@ BEGIN
 		DECLARE @quantidadeArmazem INTEGER;
 		SELECT @quantidadeArmazem=Unidades FROM Armazem WHERE C_Produto=@codigoProduto;
 
-		UPDATE Produto SET Unidades=Unidades+@quantidadeArmazem;
+		UPDATE Produto SET Unidades=Unidades+@quantidadeArmazem WHERE Codigo=@codigoProduto;
 
 		DELETE FROM Armazem WHERE C_Produto=@codigoProduto;
 
@@ -78,18 +77,8 @@ CREATE PROC encomendarProduto @codigoProduto INTEGER,
 							  @quantidade	 INTEGER
 AS
 BEGIN
-	BEGIN TRAN;
-
-	IF EXISTS (SELECT 1 FROM Produto WHERE Codigo=@codigoProduto)
-	BEGIN
-		INSERT INTO Armazem (C_Produto, T_Seccao, Unidades) VALUES (@codigoProduto, @tipoSeccao, @quantidade);
-		COMMIT TRAN;
-	END
-	ELSE
-	BEGIN
-		RAISERROR('Produto nao existe na base de dados.', 16, 1);
-		ROLLBACK TRAN;
-	END
+	INSERT INTO Armazem (C_Produto, T_Seccao, Unidades) VALUES (@codigoProduto, @tipoSeccao, @quantidade);
+	COMMIT TRAN;
 END
 
 /* ADICIONAR CLIENTES + ADICIONAR UMA COMPRA */

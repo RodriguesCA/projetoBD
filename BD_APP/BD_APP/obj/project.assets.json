@@ -2305,19 +2305,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jmzez\\.nuget\\packages\\": {}
+    "C:\\Users\\fonfo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
+      "projectUniqueName": "C:\\Users\\fonfo\\BD\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
       "projectName": "BD_APP",
-      "projectPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
-      "packagesPath": "C:\\Users\\jmzez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmzez\\OneDrive\\Documentos\\GitHub\\projetoBD\\BD_APP\\BD_APP\\obj\\",
+      "projectPath": "C:\\Users\\fonfo\\BD\\projetoBD\\BD_APP\\BD_APP\\BD_APP.csproj",
+      "packagesPath": "C:\\Users\\fonfo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fonfo\\BD\\projetoBD\\BD_APP\\BD_APP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jmzez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fonfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2376,7 +2376,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

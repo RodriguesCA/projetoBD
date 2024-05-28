@@ -10,7 +10,7 @@
     <Compile Update="Secções.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="New_client.cs">
+    <Compile Update="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Welcome.cs">
