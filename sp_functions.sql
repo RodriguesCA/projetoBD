@@ -23,11 +23,11 @@ CREATE PROC addLojista	@Nome			VARCHAR(30),
 						@N_Lojista		INTEGER,
 						@N_Horas		INTEGER,
 						@Salario		INTEGER,
-						@T_Seccao		INTEGER
+						@T_Seccao		VARCHAR(50)
 AS
 BEGIN
 	INSERT INTO Empregado VALUES (@Nome, @NIF, @N_Lojista, @N_Horas, @Salario);
-	INSERT INTO Caixista VALUES (@T_Seccao, @N_Lojista);	
+	INSERT INTO Lojista VALUES (@T_Seccao, @N_Lojista);	
 END
 
 /* REMOVER EMPREGADO - ATUALIZAR EMPREGADOS */

@@ -13,7 +13,7 @@ namespace BD_APP
             InitializeComponent();
 
             button_add_client.Hide();               // Hide Client menu
-            button_rem_client.Hide();
+
 
 
             button_rem_employe.Hide();
@@ -66,9 +66,9 @@ namespace BD_APP
             textBox_nome_lojista.Hide();
             textBox_sal_lojista.Hide();
             textBox_num_lojista.Hide();
-            list_sec_lojista.Hide();
+            comboBox_seccoes.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
 
 
 
@@ -84,6 +84,14 @@ namespace BD_APP
         private void Form1_Load(object sender, EventArgs e)
         {
             cn = getSGBDConnection();
+
+
+            comboBox_seccoes.Items.Add("Carne");
+            comboBox_seccoes.Items.Add("Fruta e Vegetais");
+            comboBox_seccoes.Items.Add("Bebidas");
+            comboBox_seccoes.Items.Add("Graos e Cereais");
+
+
         }
 
         private SqlConnection getSGBDConnection()
@@ -101,11 +109,39 @@ namespace BD_APP
             return cn.State == ConnectionState.Open;
         }
 
+        private void loadEmpregados()
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE");
+                return;
+            }
+
+            try
+            {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+                string query = "SELECT * FROM Empregado";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                dataGridView_empregados.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
+
         private void button_manager_Click(object sender, EventArgs e)
         {
             logo.Location = new Point(385, 130);// Logo to the middle
-            button_add_client.Hide();
-            button_rem_client.Hide();           // Hide Client Menu
+            button_add_client.Hide();           // Hide Client Menu                       
             button_def_add_c.Hide();
             label_add_client.Hide();            // Hide add client
             textBox_nif_c.Hide();
@@ -119,7 +155,9 @@ namespace BD_APP
             button_rem_employe.Show();          // Show Employe Menu
             button_add_lojista.Show();
             button_add_caixista.Show();
-            list_empregados.Show();             // Hide lista de Empregados
+            dataGridView_empregados.Show();             // Hide lista de Empregados
+
+            loadEmpregados();
 
         }
 
@@ -128,10 +166,8 @@ namespace BD_APP
             if (!verifySGBDConnection())
                 return;
 
-            logo.Location = new Point(385, 130);     // Logo the middle            
-            button_rem_client.Show();                // Show Client Menu
-            button_rem_client.Enabled = true;
-            button_add_client.Show();
+            logo.Location = new Point(385, 130);  // Logo the middle            
+            button_add_client.Show();             // Show Client Menu
             button_add_client.Enabled = true;
             button_def_add_c.Hide();
             label_add_client.Hide();
@@ -177,16 +213,15 @@ namespace BD_APP
             textBox_nome_lojista.Hide();
             textBox_sal_lojista.Hide();
             textBox_num_lojista.Hide();
-            list_sec_lojista.Hide();
+            comboBox_seccoes.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
         }
 
         private void button_inventario_Click(object sender, EventArgs e)
         {
             logo.Location = new Point(385, 130);    // Logo to the middle
             button_add_client.Hide();                // Hide Client Menu
-            button_rem_client.Hide();
             button_def_add_c.Hide();
             label_add_client.Hide();
             textBox_nif_c.Hide();
@@ -235,9 +270,9 @@ namespace BD_APP
             textBox_nome_lojista.Hide();
             textBox_sal_lojista.Hide();
             textBox_num_lojista.Hide();
-            list_sec_lojista.Hide();
+            comboBox_seccoes.Hide();
 
-            list_empregados.Hide();                 // Hide lista de Empregados
+            dataGridView_empregados.Hide();                 // Hide lista de Empregados
 
 
         }
@@ -305,7 +340,7 @@ namespace BD_APP
             button_def_add_c.Hide();
         }
 
-        
+
 
         private void button_def_add_c_Click(object sender, EventArgs e)
         {
@@ -377,7 +412,7 @@ namespace BD_APP
             textBox_nome_lojista.Show();
             textBox_sal_lojista.Show();
             textBox_num_lojista.Show();
-            list_sec_lojista.Show();
+            comboBox_seccoes.Show();
 
 
             logo.Location = new Point(785, 130);
@@ -397,6 +432,10 @@ namespace BD_APP
             listBox_caixa_caxista.Hide();
 
             label_add_caixista.Hide();
+
+
+           
+
         }
 
         private void button_rem_employe_Click(object sender, EventArgs e)
@@ -461,7 +500,7 @@ namespace BD_APP
             textBox_nome_lojista.Hide();
             textBox_sal_lojista.Hide();
             textBox_num_lojista.Hide();
-            list_sec_lojista.Hide();
+            comboBox_seccoes.Hide();
 
             button1_add_caixista.Show();           // Hide Caixista menu
             label_caixa_caixista.Show();
@@ -483,6 +522,98 @@ namespace BD_APP
         private void button_def_rem_c_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void list_empregados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_add_lojista_Click(object sender, EventArgs e)
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("Falha na conexão com o banco de dados.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox_nome_lojista.Text))
+            {
+                MessageBox.Show("Nome Inválido!");
+                return;
+            }
+
+            if (textBox_nif_lojista.Text.Length != 9 || !int.TryParse(textBox_nif_lojista.Text, out int nif))
+            {
+                MessageBox.Show("NIF Inválido");
+                return;
+            }
+
+            if (!int.TryParse(textBox_horas_lojista.Text, out int horas))
+            {
+                MessageBox.Show("Número de Horas Invalido");
+            }
+
+            if (!int.TryParse(textBox_num_lojista.Text, out int num))
+            {
+                MessageBox.Show("Número de Empregado Invalido");
+            }
+
+            if (!int.TryParse(textBox_sal_lojista.Text, out int sal))
+            {
+                MessageBox.Show("Salário Invalido");
+            }
+
+            if (sal <= 550)
+            {
+                MessageBox.Show("Salário Demasiado Pequeno");
+            }
+
+            if(comboBox_seccoes.SelectedItem == null)
+            {
+                MessageBox.Show("Necessário Associar secção");
+            }
+
+            string seccao = comboBox_seccoes.SelectedItem.ToString();
+
+
+            try
+            {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+
+                using (SqlCommand cmd = new SqlCommand("addLojista", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@Nome", SqlDbType.VarChar).Value = textBox_nome_lojista.Text;
+                    cmd.Parameters.Add("@NIF", SqlDbType.Int).Value = nif;
+                    cmd.Parameters.Add("@N_Lojista", SqlDbType.Int).Value = num;
+                    cmd.Parameters.Add("@N_Horas", SqlDbType.Int).Value = horas;
+                    cmd.Parameters.Add("@Salario", SqlDbType.Int).Value = sal;
+                    cmd.Parameters.Add("@T_Seccao", SqlDbType.VarChar).Value = seccao;
+
+
+                    int result = cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Lojista adicionado com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao adicionar Lojista: {ex.Message}");
+            }
+            finally
+            {
+                if (cn != null && cn.State == ConnectionState.Open)
+                {
+                    cn.Close();
+                }
+            }
         }
     }
 }   
