@@ -7,10 +7,10 @@
     <Compile Update="Fatura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Secções.cs">
+    <Compile Update="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Inventario.cs">
+    <Compile Update="Secções.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Welcome.cs">
