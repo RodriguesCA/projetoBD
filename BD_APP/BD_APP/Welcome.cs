@@ -211,7 +211,7 @@ namespace BD_APP
                     MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
                     return;
                 }
-                string query = "SELECT * FROM EmployeeRole";
+                string query = "SELECT * FROM CaixistaCaixa";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -825,7 +825,7 @@ namespace BD_APP
 
         private void button1_add_lojista_Click(object sender, EventArgs e)
         {
-            loadLojistas();
+           
 
             if (!verifySGBDConnection())
             {
@@ -912,6 +912,8 @@ namespace BD_APP
                     cn.Close();
                 }
             }
+
+            loadLojistas();
         }
 
         private void button1_add_caixista_Click(object sender, EventArgs e)
