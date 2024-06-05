@@ -81,8 +81,19 @@
             label_id_rem = new Label();
             textBox_rem_empregado = new TextBox();
             dataGridView_clientes = new DataGridView();
+            dataGridView_Caixistas = new DataGridView();
+            dataGridView_Lojistas = new DataGridView();
+            button1 = new Button();
+            button2 = new Button();
+            label_valor_inventario = new Label();
+            label_secção = new Label();
+            comboBox_secção = new ComboBox();
+            label_valor = new Label();
+            textBox_valor_secção = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView_empregados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_clientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Caixistas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Lojistas).BeginInit();
             SuspendLayout();
             // 
             // button_empregados
@@ -623,12 +634,113 @@
             dataGridView_clientes.Size = new Size(1253, 225);
             dataGridView_clientes.TabIndex = 67;
             // 
+            // dataGridView_Caixistas
+            // 
+            dataGridView_Caixistas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_Caixistas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_Caixistas.Location = new Point(43, 530);
+            dataGridView_Caixistas.Name = "dataGridView_Caixistas";
+            dataGridView_Caixistas.RowHeadersWidth = 62;
+            dataGridView_Caixistas.Size = new Size(1253, 225);
+            dataGridView_Caixistas.TabIndex = 68;
+            // 
+            // dataGridView_Lojistas
+            // 
+            dataGridView_Lojistas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_Lojistas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_Lojistas.Location = new Point(43, 530);
+            dataGridView_Lojistas.Name = "dataGridView_Lojistas";
+            dataGridView_Lojistas.RowHeadersWidth = 62;
+            dataGridView_Lojistas.Size = new Size(1253, 225);
+            dataGridView_Lojistas.TabIndex = 69;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.System;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(33, 113);
+            button1.Name = "button1";
+            button1.Size = new Size(232, 59);
+            button1.TabIndex = 70;
+            button1.Text = "Stock";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.System;
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(33, 197);
+            button2.Name = "button2";
+            button2.Size = new Size(232, 59);
+            button2.TabIndex = 71;
+            button2.Text = "Valor";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // label_valor_inventario
+            // 
+            label_valor_inventario.BackColor = Color.WhiteSmoke;
+            label_valor_inventario.BorderStyle = BorderStyle.FixedSingle;
+            label_valor_inventario.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_valor_inventario.Location = new Point(318, 110);
+            label_valor_inventario.Name = "label_valor_inventario";
+            label_valor_inventario.Size = new Size(467, 403);
+            label_valor_inventario.TabIndex = 72;
+            label_valor_inventario.Text = "Valor do Inventário";
+            // 
+            // label_secção
+            // 
+            label_secção.AutoSize = true;
+            label_secção.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_secção.Location = new Point(351, 210);
+            label_secção.Name = "label_secção";
+            label_secção.Size = new Size(95, 32);
+            label_secção.TabIndex = 73;
+            label_secção.Text = "Secção:";
+            // 
+            // comboBox_secção
+            // 
+            comboBox_secção.FormattingEnabled = true;
+            comboBox_secção.Location = new Point(486, 213);
+            comboBox_secção.Name = "comboBox_secção";
+            comboBox_secção.Size = new Size(222, 33);
+            comboBox_secção.TabIndex = 74;
+            comboBox_secção.SelectedIndexChanged += comboBox_secção_SelectedIndexChanged;
+            // 
+            // label_valor
+            // 
+            label_valor.AutoSize = true;
+            label_valor.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_valor.Location = new Point(351, 275);
+            label_valor.Name = "label_valor";
+            label_valor.Size = new Size(76, 32);
+            label_valor.TabIndex = 75;
+            label_valor.Text = "Valor:";
+            // 
+            // textBox_valor_secção
+            // 
+            textBox_valor_secção.Location = new Point(486, 276);
+            textBox_valor_secção.Name = "textBox_valor_secção";
+            textBox_valor_secção.ReadOnly = true;
+            textBox_valor_secção.Size = new Size(150, 31);
+            textBox_valor_secção.TabIndex = 76;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1322, 779);
+            Controls.Add(textBox_valor_secção);
+            Controls.Add(label_valor);
+            Controls.Add(comboBox_secção);
+            Controls.Add(label_secção);
+            Controls.Add(label_valor_inventario);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(dataGridView_Lojistas);
+            Controls.Add(dataGridView_Caixistas);
             Controls.Add(dataGridView_clientes);
             Controls.Add(textBox_rem_empregado);
             Controls.Add(label_id_rem);
@@ -686,6 +798,8 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_empregados).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_clientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Caixistas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Lojistas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -746,5 +860,14 @@
         private TextBox textBox_rem_empregado;
         private DataGridView dataGridView1;
         private DataGridView dataGridView_clientes;
+        private DataGridView dataGridView_Caixistas;
+        private DataGridView dataGridView_Lojistas;
+        private Button button1;
+        private Button button2;
+        private Label label_valor_inventario;
+        private Label label_secção;
+        private ComboBox comboBox_secção;
+        private Label label_valor;
+        private TextBox textBox_valor_secção;
     }
 }

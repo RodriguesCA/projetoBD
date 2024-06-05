@@ -32,6 +32,10 @@
             button_armazem = new Button();
             dataGridView_produtos = new DataGridView();
             panel_produtos = new Panel();
+            textBox_value = new TextBox();
+            label_value = new Label();
+            label_secção = new Label();
+            comboBox_seccao = new ComboBox();
             button_encomendar = new Button();
             textBox3 = new TextBox();
             label4 = new Label();
@@ -52,9 +56,10 @@
             // 
             // button_produto
             // 
-            button_produto.Location = new Point(36, 24);
+            button_produto.Location = new Point(28, 19);
+            button_produto.Margin = new Padding(2);
             button_produto.Name = "button_produto";
-            button_produto.Size = new Size(183, 46);
+            button_produto.Size = new Size(141, 36);
             button_produto.TabIndex = 0;
             button_produto.Text = "Produtos";
             button_produto.UseVisualStyleBackColor = true;
@@ -62,9 +67,10 @@
             // 
             // button_armazem
             // 
-            button_armazem.Location = new Point(281, 24);
+            button_armazem.Location = new Point(216, 19);
+            button_armazem.Margin = new Padding(2);
             button_armazem.Name = "button_armazem";
-            button_armazem.Size = new Size(183, 46);
+            button_armazem.Size = new Size(141, 36);
             button_armazem.TabIndex = 1;
             button_armazem.Text = "Armazém";
             button_armazem.UseVisualStyleBackColor = true;
@@ -75,14 +81,19 @@
             dataGridView_produtos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_produtos.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView_produtos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_produtos.Location = new Point(513, 24);
+            dataGridView_produtos.Location = new Point(395, 19);
+            dataGridView_produtos.Margin = new Padding(2);
             dataGridView_produtos.Name = "dataGridView_produtos";
             dataGridView_produtos.RowHeadersWidth = 82;
-            dataGridView_produtos.Size = new Size(814, 638);
+            dataGridView_produtos.Size = new Size(626, 498);
             dataGridView_produtos.TabIndex = 2;
             // 
             // panel_produtos
             // 
+            panel_produtos.Controls.Add(textBox_value);
+            panel_produtos.Controls.Add(label_value);
+            panel_produtos.Controls.Add(label_secção);
+            panel_produtos.Controls.Add(comboBox_seccao);
             panel_produtos.Controls.Add(button_encomendar);
             panel_produtos.Controls.Add(textBox3);
             panel_produtos.Controls.Add(label4);
@@ -95,19 +106,59 @@
             panel_produtos.Controls.Add(comboBox1);
             panel_produtos.Controls.Add(label1);
             panel_produtos.Controls.Add(restock);
-            panel_produtos.Location = new Point(36, 128);
+            panel_produtos.Location = new Point(28, 100);
+            panel_produtos.Margin = new Padding(2);
             panel_produtos.Name = "panel_produtos";
-            panel_produtos.Size = new Size(428, 534);
+            panel_produtos.Size = new Size(329, 417);
             panel_produtos.TabIndex = 3;
+            // 
+            // textBox_value
+            // 
+            textBox_value.Location = new Point(129, 174);
+            textBox_value.Name = "textBox_value";
+            textBox_value.Size = new Size(150, 31);
+            textBox_value.TabIndex = 15;
+            // 
+            // label_value
+            // 
+            label_value.AutoSize = true;
+            label_value.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_value.ForeColor = SystemColors.ActiveCaptionText;
+            label_value.Location = new Point(13, 176);
+            label_value.Name = "label_value";
+            label_value.Size = new Size(63, 30);
+            label_value.TabIndex = 14;
+            label_value.Text = "Valor";
+            // 
+            // label_secção
+            // 
+            label_secção.AutoSize = true;
+            label_secção.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_secção.ForeColor = SystemColors.ActiveCaptionText;
+            label_secção.Location = new Point(13, 101);
+            label_secção.Name = "label_secção";
+            label_secção.Size = new Size(81, 30);
+            label_secção.TabIndex = 13;
+            label_secção.Text = "Secção";
+            // 
+            // comboBox_seccao
+            // 
+            comboBox_seccao.FormattingEnabled = true;
+            comboBox_seccao.Location = new Point(129, 101);
+            comboBox_seccao.Name = "comboBox_seccao";
+            comboBox_seccao.Size = new Size(182, 33);
+            comboBox_seccao.TabIndex = 12;
+            comboBox_seccao.SelectedIndexChanged += comboBox_seccao_SelectedIndexChanged;
             // 
             // button_encomendar
             // 
             button_encomendar.BackColor = SystemColors.GradientInactiveCaption;
             button_encomendar.FlatAppearance.BorderSize = 0;
             button_encomendar.FlatAppearance.MouseOverBackColor = SystemColors.GradientActiveCaption;
-            button_encomendar.Location = new Point(229, 476);
+            button_encomendar.Location = new Point(176, 372);
+            button_encomendar.Margin = new Padding(2);
             button_encomendar.Name = "button_encomendar";
-            button_encomendar.Size = new Size(176, 46);
+            button_encomendar.Size = new Size(135, 36);
             button_encomendar.TabIndex = 11;
             button_encomendar.Text = "Encomendar";
             button_encomendar.UseVisualStyleBackColor = false;
@@ -115,45 +166,50 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(184, 420);
+            textBox3.Location = new Point(142, 328);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 39);
+            textBox3.Size = new Size(155, 31);
             textBox3.TabIndex = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(27, 419);
+            label4.Location = new Point(21, 327);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(135, 37);
+            label4.Size = new Size(98, 28);
             label4.TabIndex = 9;
             label4.Text = "Unidades:";
             label4.Click += label4_Click;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(144, 353);
+            textBox2.Location = new Point(111, 276);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(240, 39);
+            textBox2.Size = new Size(186, 31);
             textBox2.TabIndex = 8;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(27, 352);
+            label3.Location = new Point(21, 275);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(105, 37);
+            label3.Size = new Size(77, 28);
             label3.TabIndex = 7;
             label3.Text = "Secção:";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(144, 286);
+            comboBox2.Location = new Point(111, 223);
+            comboBox2.Margin = new Padding(2);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(240, 40);
+            comboBox2.Size = new Size(186, 33);
             comboBox2.TabIndex = 6;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
@@ -163,9 +219,10 @@
             encomendar.BorderStyle = BorderStyle.None;
             encomendar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             encomendar.ForeColor = SystemColors.ActiveCaptionText;
-            encomendar.Location = new Point(17, 223);
+            encomendar.Location = new Point(13, 174);
+            encomendar.Margin = new Padding(2);
             encomendar.Name = "encomendar";
-            encomendar.Size = new Size(388, 43);
+            encomendar.Size = new Size(298, 32);
             encomendar.TabIndex = 5;
             encomendar.Text = "Encomendar Produtos";
             encomendar.TextChanged += textBox1_TextChanged;
@@ -174,9 +231,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(27, 285);
+            label2.Location = new Point(21, 223);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(111, 37);
+            label2.Size = new Size(81, 28);
             label2.TabIndex = 4;
             label2.Text = "Código:";
             // 
@@ -185,9 +243,10 @@
             button_restock.BackColor = SystemColors.GradientInactiveCaption;
             button_restock.FlatAppearance.BorderSize = 0;
             button_restock.FlatAppearance.MouseOverBackColor = SystemColors.GradientActiveCaption;
-            button_restock.Location = new Point(255, 141);
+            button_restock.Location = new Point(196, 110);
+            button_restock.Margin = new Padding(2);
             button_restock.Name = "button_restock";
-            button_restock.Size = new Size(150, 46);
+            button_restock.Size = new Size(115, 36);
             button_restock.TabIndex = 3;
             button_restock.Text = "Restock";
             button_restock.UseVisualStyleBackColor = false;
@@ -196,18 +255,21 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(144, 79);
+            comboBox1.Location = new Point(111, 62);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(240, 40);
+            comboBox1.Size = new Size(186, 33);
             comboBox1.TabIndex = 2;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(27, 78);
+            label1.Location = new Point(21, 61);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(111, 37);
+            label1.Size = new Size(81, 28);
             label1.TabIndex = 1;
             label1.Text = "Código:";
             label1.Click += label1_Click;
@@ -218,9 +280,10 @@
             restock.BorderStyle = BorderStyle.None;
             restock.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             restock.ForeColor = SystemColors.ActiveCaptionText;
-            restock.Location = new Point(17, 16);
+            restock.Location = new Point(13, 12);
+            restock.Margin = new Padding(2);
             restock.Name = "restock";
-            restock.Size = new Size(388, 43);
+            restock.Size = new Size(298, 32);
             restock.TabIndex = 0;
             restock.Text = "Restock de Produtos";
             restock.TextChanged += gestão_produtos_TextChanged;
@@ -230,23 +293,23 @@
             dataGridView_armazem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_armazem.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView_armazem.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_armazem.Location = new Point(513, 24);
+            dataGridView_armazem.Location = new Point(395, 19);
+            dataGridView_armazem.Margin = new Padding(2);
             dataGridView_armazem.Name = "dataGridView_armazem";
             dataGridView_armazem.RowHeadersWidth = 82;
-            dataGridView_armazem.Size = new Size(917, 638);
+            dataGridView_armazem.Size = new Size(705, 498);
             dataGridView_armazem.TabIndex = 4;
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1458, 684);
+            ClientSize = new Size(1122, 534);
             Controls.Add(dataGridView_armazem);
             Controls.Add(panel_produtos);
             Controls.Add(dataGridView_produtos);
             Controls.Add(button_armazem);
             Controls.Add(button_produto);
-            Margin = new Padding(4);
             Name = "Inventario";
             Text = "Inventário";
             Load += Inventario_Load;
@@ -276,5 +339,10 @@
         private Button button_encomendar;
         private TextBox textBox3;
         private DataGridView dataGridView_armazem;
+        private TextBox textBox_value;
+        private Label label_value;
+        private Label label_secção;
+        private ComboBox comboBox_seccao;
+        private ComboBox comboBox3;
     }
 }

@@ -78,6 +78,7 @@ CREATE TABLE Caixista(
     N_Caixista    INTEGER        NOT NULL,
 	
     FOREIGN KEY(N_Caixista) REFERENCES Empregado(N_Empregado),
+	FOREIGN KEY(N_Caixa)	REFERENCES Caixa(N_Caixa)
     
 );
 

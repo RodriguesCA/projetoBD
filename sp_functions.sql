@@ -14,7 +14,8 @@ AS
 BEGIN
 	INSERT INTO Empregado VALUES (@Nome, @NIF, @N_Caixista, @N_Horas, @Salario);
 	INSERT INTO Caixista VALUES (@N_Caixa, @N_Caixista);
-	UPDATE Caixa SET N_Caixista = @N_Caixista WHERE N_Caixista = @N_Caixista;
+	UPDATE Caixa SET N_Caixista = @N_Caixista WHERE N_Caixa = @N_Caixa;
+	
 END
 
 /* ADICIONAR LOJISTA - ADICIONAR EMPREGADOS */

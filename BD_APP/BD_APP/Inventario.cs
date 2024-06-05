@@ -22,6 +22,11 @@ namespace BD_APP
             textBox2.Hide();
             label4.Hide();
             textBox3.Hide();
+            textBox_value.Show();
+            label_value.Show();
+            label_secção.Show();
+            comboBox_seccao.Show();
+            dataGridView_produtos.Show();
 
             dataGridView_armazem.Hide();
         }
@@ -209,12 +214,21 @@ namespace BD_APP
 
             dataGridView_produtos.Hide();
             dataGridView_armazem.Show();
+            textBox_value.Hide();
+            label_value.Hide();
+            label_secção.Hide();
+            comboBox_seccao.Hide();
 
         }
 
         private void button_produto_Click(object sender, EventArgs e)
         {
             loadProdutos();
+
+            textBox_value.Show();
+            label_value.Show();
+            label_secção.Show();
+            comboBox_seccao.Show();
 
             panel_produtos.Hide();
             restock.Hide();
@@ -231,6 +245,7 @@ namespace BD_APP
 
             dataGridView_produtos.Show();
             dataGridView_armazem.Hide();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -374,6 +389,16 @@ namespace BD_APP
             {
                 MessageBox.Show("Por favor, selecione um produto.");
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_seccao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -100,4 +100,26 @@ BEGIN
         ROLLBACK TRAN;
     END
 END
+
+GO
+
+CREATE TRIGGER _1_Caixa_1Caixista
+ON Caixista
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Check if the inserted Caixista is already assigned to a Caixa
+    IF EXISTS (
+        SELECT 1 
+        FROM inserted i
+        JOIN Caixa c ON i.N_Caixa = c.N_Caixa
+        WHERE c.N_Caixista IS NOT NULL AND c.N_Caixista <> i.N_Caixista
+    )
+    BEGIN
+        RAISERROR('A Caixa já tem um Caixista atribuído.', 16, 1);
+        ROLLBACK TRAN;
+    END
+END;
 GO

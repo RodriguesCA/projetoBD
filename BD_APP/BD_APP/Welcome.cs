@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace BD_APP
 {
@@ -39,7 +40,7 @@ namespace BD_APP
             textBox_rem_empregado.Hide();
             label_id_rem.Hide();
             label2.Hide();
-            
+
 
             button1_add_caixista.Hide();           // Hide Caixista menu
             label_caixa_caixista.Hide();
@@ -75,11 +76,22 @@ namespace BD_APP
 
             dataGridView_empregados.Hide();                 // Hide lista de Empregados
             dataGridView_clientes.Hide();
+            dataGridView_Caixistas.Hide();
+            dataGridView_Lojistas.Hide();
 
 
 
-
+            button1.Hide();
+            button2.Hide();
             label1.Hide();
+
+            label_valor_inventario.Hide();
+            label_valor.Hide();
+            label_secção.Hide();
+            textBox_valor_secção.Hide();
+            comboBox_secção.Hide();
+
+            LoadSectionsIntoComboBox();
 
 
 
@@ -119,6 +131,41 @@ namespace BD_APP
             return cn.State == ConnectionState.Open;
         }
 
+        private void LoadSectionsIntoComboBox()
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE");
+                return;
+            }
+
+            try
+            {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+
+                string query = "SELECT Tipo FROM Seccao";
+
+
+
+                SqlCommand command = new SqlCommand(query, cn);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox_secção.Items.Add(reader["Tipo"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
+
         private void loadEmpregados()
         {
             if (!verifySGBDConnection())
@@ -135,12 +182,70 @@ namespace BD_APP
                     MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
                     return;
                 }
-                string query = "SELECT * FROM Empregado";
+                string query = "SELECT * FROM EmployeeRole";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
 
                 dataGridView_empregados.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
+
+        private void loadCaixistas()
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE");
+                return;
+            }
+
+            try
+            {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+                string query = "SELECT * FROM EmployeeRole";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                dataGridView_Caixistas.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
+
+        private void loadLojistas()
+        {
+            if (!verifySGBDConnection())
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE");
+                return;
+            }
+
+            try
+            {
+                cn = getSGBDConnection();
+                if (!verifySGBDConnection())
+                {
+                    MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE", "Connection Test");
+                    return;
+                }
+                string query = "SELECT * FROM LojistaSecao";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, cn);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                dataGridView_Lojistas.DataSource = dataTable;
             }
             catch (Exception ex)
             {
@@ -231,6 +336,16 @@ namespace BD_APP
             label_add_caixista.Hide();
 
             dataGridView_clientes.Hide();
+            dataGridView_Caixistas.Hide();
+
+            button1.Hide();
+            button2.Hide();
+
+            label_valor_inventario.Hide();
+            label_valor.Hide();
+            label_secção.Hide();
+            textBox_valor_secção.Hide();
+            comboBox_secção.Hide();
 
             loadEmpregados();
 
@@ -296,13 +411,24 @@ namespace BD_APP
 
             dataGridView_empregados.Hide();                 // Hide lista de Empregados
             dataGridView_clientes.Show();
+            dataGridView_Caixistas.Hide();
+            dataGridView_Lojistas.Hide();
+
+            button1.Hide();
+            button2.Hide();
+
+            label_valor_inventario.Hide();
+            label_valor.Hide();
+            label_secção.Hide();
+            textBox_valor_secção.Hide();
+            comboBox_secção.Hide();
 
             loadClientes();
         }
 
         private void button_inventario_Click(object sender, EventArgs e)
         {
-            logo.Location = new Point(385, 130);    // Logo to the middle
+            logo.Location = new Point(385, 130);
             button_add_client.Hide();                // Hide Client Menu
             button_def_add_c.Hide();
             label_add_client.Hide();
@@ -310,7 +436,7 @@ namespace BD_APP
             textBox_nome_c.Hide();
             label_nome_c.Hide();
             label_nif_c.Hide();
-            button_def_rem_e.Hide();               
+            button_def_rem_e.Hide();
             label_rem_c.Hide();
             label_nif_rem_c.Hide();
             textBox_rem_nif_c.Hide();
@@ -360,9 +486,19 @@ namespace BD_APP
 
             dataGridView_empregados.Hide();                 // Hide lista de Empregados
             dataGridView_clientes.Hide();
+            dataGridView_Caixistas.Hide();
+            dataGridView_Lojistas.Hide();
 
-            Inventario frm = new();
-            frm.Show();
+            label_valor_inventario.Hide();
+            label_valor.Hide();
+            label_secção.Hide();
+            textBox_valor_secção.Hide();
+            comboBox_secção.Hide();
+
+            button1.Show();
+            button2.Show();
+
+
 
 
         }
@@ -529,6 +665,11 @@ namespace BD_APP
             textBox_rem_empregado.Hide();
             label_id_rem.Hide();
             label2.Hide();
+            dataGridView_Caixistas.Hide();
+            dataGridView_Lojistas.Show();
+            dataGridView_empregados.Hide();
+
+            loadLojistas();
 
 
 
@@ -581,6 +722,9 @@ namespace BD_APP
             textBox_rem_empregado.Show();
             label_id_rem.Show();
             label2.Show();
+            dataGridView_Caixistas.Hide();
+            dataGridView_empregados.Show();
+            dataGridView_Lojistas.Hide();
         }
 
         private void label_add_client_Click(object sender, EventArgs e)
@@ -661,6 +805,11 @@ namespace BD_APP
             textBox_rem_empregado.Hide();
             label_id_rem.Hide();
             label2.Hide();
+            dataGridView_Caixistas.Show();
+            dataGridView_empregados.Hide();
+            dataGridView_Lojistas.Hide();
+
+            loadCaixistas();
 
         }
 
@@ -676,6 +825,8 @@ namespace BD_APP
 
         private void button1_add_lojista_Click(object sender, EventArgs e)
         {
+            loadLojistas();
+
             if (!verifySGBDConnection())
             {
                 MessageBox.Show("Falha na conexão com o banco de dados.");
@@ -765,6 +916,7 @@ namespace BD_APP
 
         private void button1_add_caixista_Click(object sender, EventArgs e)
         {
+            loadCaixistas();
             if (!verifySGBDConnection())
             {
                 MessageBox.Show("Falha na conexão com o banco de dados.");
@@ -912,5 +1064,60 @@ namespace BD_APP
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            logo.Location = new Point(385, 130);
+            Inventario frm = new();
+            frm.Show();
+            label_valor_inventario.Hide();
+            label_valor.Hide();
+            label_secção.Hide();
+            textBox_valor_secção.Hide();
+            comboBox_secção.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            logo.Location = new Point(785, 130);
+            label_valor.Show();
+            label_secção.Show();
+            textBox_valor_secção.Show();
+            comboBox_secção.Show();
+            label_valor_inventario.Show();
+
+        }
+
+
+        private void comboBox_secção_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (comboBox_secção.SelectedItem != null)
+            {
+                string selectedSection = comboBox_secção.SelectedItem.ToString();
+                decimal inventoryValue = GetStoreInventoryValueBySection(selectedSection);
+                
+                textBox_valor_secção.Text = inventoryValue.ToString("C");
+            }
+
+
+        }
+
+        private decimal GetStoreInventoryValueBySection(string sectionType)
+        {
+            string connectionString = "data source= JORDAO-GRAM\\SQLEXPRESS; integrated security=true; initial catalog=MiniMercado";
+            string query = "SELECT dbo.GetStoreInventoryValueBySection(@SectionType) AS InventoryValue";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@SectionType", sectionType);
+
+                connection.Open();
+                var result = command.ExecuteScalar();
+                connection.Close();
+
+                return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+            }
+        }
     }
 }   
