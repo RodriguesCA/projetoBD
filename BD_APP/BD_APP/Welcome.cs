@@ -361,6 +361,9 @@ namespace BD_APP
             dataGridView_empregados.Hide();                 // Hide lista de Empregados
             dataGridView_clientes.Hide();
 
+            Inventario frm = new();
+            frm.Show();
+
 
         }
 
@@ -860,8 +863,11 @@ namespace BD_APP
             if (!int.TryParse(textBox_rem_empregado.Text, out int codigo))
             {
                 MessageBox.Show("Código Inválido");
+
                 return;
             }
+
+            MessageBox.Show($"{codigo}");
 
             try
             {
@@ -879,6 +885,8 @@ namespace BD_APP
                     cmd.Parameters.Add("@N_Empregado", SqlDbType.Int).Value = codigo;
 
                     int result = cmd.ExecuteNonQuery();
+
+                    MessageBox.Show($"Result from stored procedure: {result}");
 
                     if (result > 0)
                     {

@@ -2,6 +2,10 @@
 USE MiniMercado
 GO
 
+/* UM CAIXISTA TEM DE SE DESASSOCIAR DA CAIXA QUANDO ELIMINADO*/
+
+
+
 /* UM EMPREGADO NAO PODE SER CAIXISTA E LOJISTA */
 CREATE TRIGGER ValidarCaixista ON Caixista
 AFTER INSERT, UPDATE
@@ -14,6 +18,9 @@ BEGIN
         RAISERROR('Um Empregado não pode ser Lojista e Caixista.', 16, 1);
         ROLLBACK TRAN;
     END
+
+
+
 END
 GO
 
